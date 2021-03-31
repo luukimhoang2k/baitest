@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react'
 import './App.css';
+// import './themify-icons/themify-icons.css';
 import anh from './Image/logo.svg'
 // import anh1 from './Image/slider.jpg';
 import anh2 from './Image/slider1.jpg';
@@ -20,7 +21,6 @@ import volkswagen from './Image/volkswagen-logo.svg';
 import mercedes from './Image/mercedes-logo-v2.svg';
 import adidas from './Image/adidas-logo.svg';
 import eventbrite from './Image/eventbrite-logo.svg';
-// import '/themify-icons/themify-icons.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +71,12 @@ class App extends React.Component {
     ],
     images:[
         booking,volkswagen,eventbrite,adidas,eventbrite
-    ]
+    ],
+    titles:{
+        array1:['Udemy for Business','Teach on Udemy','Get the app','About us','Contact us'],
+        array2:['Careers','Blog','Help and Support','Affiliate'],
+        array3:['Terms','Privacy policy','Sitemap','Featured courses']
+    }
     }
   }
   render() {
@@ -312,12 +317,55 @@ class App extends React.Component {
                 </div>
             </div>
             <div className="container-group8">
-
+                    <div className="c-group8">
+                        <div className="c-group8-1">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QFIhEmOd6No" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="c-group8-2">
+                            <h1>Transform your life through education</h1>
+                            <p> Mohamad Alaloush launched a new career 
+                                in software development by taking courses
+                                on Udemy. What will you be able to do?
+                            </p>
+                        </div>
+                    </div>
             </div>
-            
         </div>
         <div className="footer">
-
+            <div className="footer-container">
+                <ul className="ul-footer">
+                        {this.state.titles.array1.map(item=>(
+                            <li>
+                                {item}
+                            </li>
+                        ))}
+                </ul>
+                <ul className="ul-footer">
+                        {this.state.titles.array2.map(item=>(
+                            <li>
+                                {item}
+                            </li>
+                        ))}
+                </ul>
+                <ul className="ul-footer">
+                        {this.state.titles.array3.map(item=>(
+                            <li>
+                                {item}
+                            </li>
+                        ))}
+                </ul>
+                <div className="div-footer">
+                    <i>1</i>
+                    <a>
+                        English
+                    </a>
+                    <i>2</i>
+                </div>
+            </div>
+            <div className="footer-container1">
+                <img src={anh}></img>
+                <p>© 2021 Udemy, Inc.</p>
+            </div>
         </div>
       </>
     )
